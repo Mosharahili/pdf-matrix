@@ -1,38 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+  IMPORTANT: Replace "pdf-matrix.vercel.app" below with your actual production domain.
+  You can also set VITE_SITE_URL in your Vercel project environment variables and
+  run `pnpm --filter @workspace/pdf-platform run generate-sitemap` to regenerate.
+-->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.com/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://example.com/?lang=ar"/>
+    <loc>https://pdf-matrix.vercel.app/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pdf-matrix.vercel.app/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pdf-matrix.vercel.app/?lang=ar"/>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://example.com/dashboard</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/dashboard?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://example.com/dashboard?lang=ar"/>
+    <loc>https://pdf-matrix.vercel.app/dashboard</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pdf-matrix.vercel.app/dashboard?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pdf-matrix.vercel.app/dashboard?lang=ar"/>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/convert/pdf-to-word</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/convert/pdf-to-word?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://example.com/convert/pdf-to-word?lang=ar"/>
+    <loc>https://pdf-matrix.vercel.app/convert/pdf-to-word</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pdf-matrix.vercel.app/convert/pdf-to-word?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pdf-matrix.vercel.app/convert/pdf-to-word?lang=ar"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://example.com/convert/pdf-to-excel</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/convert/pdf-to-excel?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://example.com/convert/pdf-to-excel?lang=ar"/>
+    <loc>https://pdf-matrix.vercel.app/convert/pdf-to-excel</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pdf-matrix.vercel.app/convert/pdf-to-excel?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pdf-matrix.vercel.app/convert/pdf-to-excel?lang=ar"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://example.com/convert/pdf-to-powerpoint</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/convert/pdf-to-powerpoint?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://example.com/convert/pdf-to-powerpoint?lang=ar"/>
+    <loc>https://pdf-matrix.vercel.app/convert/pdf-to-powerpoint</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pdf-matrix.vercel.app/convert/pdf-to-powerpoint?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pdf-matrix.vercel.app/convert/pdf-to-powerpoint?lang=ar"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
