@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useListFiles } from '@workspace/api-client-react';
+import { useListFiles, getListFilesQueryKey } from '@workspace/api-client-react';
 import { FileCard } from './FileCard';
 import { useTranslation } from '@/lib/i18n';
 import { Loader2, FileX } from 'lucide-react';
@@ -12,7 +12,7 @@ export function FileManager() {
   // Use a refetch interval if any conversion is processing
   const { data, isLoading, isError } = useListFiles({
     query: {
-      queryKey: ['listFiles', shouldPoll],
+      queryKey: getListFilesQueryKey(),
       refetchInterval: shouldPoll ? 2000 : false,
     }
   });

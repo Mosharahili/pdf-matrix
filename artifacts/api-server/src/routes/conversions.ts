@@ -36,59 +36,71 @@ async function convertPdf(inputPath: string, outputFormat: string, outputDir: st
 
   if (outputFormat === "txt") {
     try {
-      const { stdout } = await execFileAsync("pdftotext", [inputPath, outputPath]);
-      void stdout;
-      return outputPath;
-    } catch {
-      const { stdout } = await execFileAsync("strings", [inputPath]);
-      fs.writeFileSync(outputPath, stdout || "[Could not extract text from PDF]");
-      return outputPath;
+      await execFileAsync("pdftotext", [inputPath, outputPath]);
+      if (fs.existsSync(outputPath)) {
+        return outputPath;
+      }
+      throw new Error("pdftotext produced no output");
+    } catch (pdftotextErr) {
+      try {
+        const { stdout } = await execFileAsync("strings", [inputPath]);
+        if (!stdout || stdout.trim().length === 0) {
+          throw new Error("No extractable text found in PDF");
+        }
+        fs.writeFileSync(outputPath, stdout);
+        return outputPath;
+      } catch (stringsErr) {
+        throw new Error(`Text extraction failed: ${String(pdftotextErr)}; strings fallback: ${String(stringsErr)}`);
+      }
     }
   }
 
   if (outputFormat === "png" || outputFormat === "jpg") {
     const density = 150;
     const quality = 90;
-    const ext = outputFormat === "jpg" ? "jpg" : "png";
-    const singleOutput = outputPath.replace(`.${ext}`, `-0.${ext}`);
     try {
       await execFileAsync("convert", [
         "-density", String(density),
         "-quality", String(quality),
-        inputPath,
+        `${inputPath}[0]`,
         outputPath,
       ]);
-      if (fs.existsSync(singleOutput)) {
-        return singleOutput;
+      if (fs.existsSync(outputPath)) {
+        return outputPath;
       }
-      return outputPath;
-    } catch {
+      throw new Error("ImageMagick convert produced no output");
+    } catch (convertErr) {
       try {
+        const prefix = path.join(outputDir, `${baseName}-${Date.now()}`);
+        const ext = outputFormat === "jpg" ? "jpeg" : "png";
         await execFileAsync("pdftoppm", [
           "-r", String(density),
           "-f", "1",
           "-l", "1",
-          `-${outputFormat === "jpg" ? "jpeg" : "png"}`,
+          `-${ext}`,
           inputPath,
-          path.join(outputDir, `${baseName}-${Date.now()}`),
+          prefix,
         ]);
-        const files = fs.readdirSync(outputDir).filter(
-          (f) => f.startsWith(`${baseName}`) && f.endsWith(`.${ext}`)
+        const dirFiles = fs.readdirSync(outputDir);
+        const basePart = path.basename(prefix);
+        const match = dirFiles.find(
+          (f) => f.startsWith(basePart) && f.endsWith(`.${outputFormat}`)
         );
-        if (files.length > 0) {
-          return path.join(outputDir, files[files.length - 1]);
+        if (match) {
+          const finalPath = path.join(outputDir, outputName);
+          fs.renameSync(path.join(outputDir, match), finalPath);
+          return finalPath;
         }
-        throw new Error("No output image generated");
-      } catch (e2) {
-        throw new Error(`Image conversion failed: ${String(e2)}`);
+        throw new Error("pdftoppm produced no output file");
+      } catch (pdftoppmErr) {
+        throw new Error(
+          `Image conversion failed. ImageMagick: ${String(convertErr)}; pdftoppm: ${String(pdftoppmErr)}`
+        );
       }
     }
   }
 
   if (outputFormat === "docx" || outputFormat === "xlsx" || outputFormat === "pptx") {
-    const libreOfficeFormat = outputFormat === "xlsx" ? "calc" : outputFormat === "pptx" ? "impress" : "writer";
-    void libreOfficeFormat;
-
     try {
       await execFileAsync("libreoffice", [
         "--headless",
@@ -102,18 +114,19 @@ async function convertPdf(inputPath: string, outputFormat: string, outputDir: st
         fs.renameSync(expectedOutput, finalOutput);
         return finalOutput;
       }
-      throw new Error("LibreOffice produced no output");
-    } catch {
+      throw new Error("LibreOffice produced no output file");
+    } catch (libreOfficeErr) {
       try {
         await execFileAsync("unoconv", ["-f", outputFormat, "-o", outputPath, inputPath]);
         if (fs.existsSync(outputPath)) {
           return outputPath;
         }
-        throw new Error("unoconv produced no output");
-      } catch {
-        const placeholderContent = `PDF Conversion Placeholder\n\nOriginal file: ${path.basename(inputPath)}\nTarget format: ${outputFormat}\n\nNote: LibreOffice or unoconv is required for full ${outputFormat} conversion.\nThis file was generated as a placeholder.`;
-        fs.writeFileSync(outputPath, placeholderContent);
-        return outputPath;
+        throw new Error("unoconv produced no output file");
+      } catch (unoconvErr) {
+        throw new Error(
+          `Office conversion requires LibreOffice or unoconv. ` +
+          `LibreOffice: ${String(libreOfficeErr)}; unoconv: ${String(unoconvErr)}`
+        );
       }
     }
   }
