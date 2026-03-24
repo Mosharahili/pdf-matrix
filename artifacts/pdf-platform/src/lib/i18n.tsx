@@ -113,14 +113,14 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     localStorage.setItem('app_language', lang);
   };
 
-  const dir = language === 'ar' ? 'rtl' : 'ltr';
+  const dir: 'ltr' | 'rtl' = language === 'ar' ? 'rtl' : 'ltr';
 
   useEffect(() => {
     document.documentElement.dir = dir;
     document.documentElement.lang = language;
   }, [language, dir]);
 
-  const value = {
+  const value: LanguageContextType = {
     language,
     setLanguage,
     t: translations[language],

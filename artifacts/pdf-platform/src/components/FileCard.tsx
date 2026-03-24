@@ -5,7 +5,7 @@ import { FileRecord, OutputFormat, ConversionRecord } from '@workspace/api-clien
 import { format } from 'date-fns';
 import { 
   File, FileText, FileImage, FileSpreadsheet, FileIcon, 
-  Trash2, Download, RefreshCw, ChevronDown, CheckCircle2, XCircle, Clock
+  Trash2, Download, RefreshCw, ChevronDown, CheckCircle2, XCircle, Clock, Loader2
 } from 'lucide-react';
 import { useDeleteFile, useStartConversion, downloadOriginalFile, downloadConvertedFile, getListFilesQueryKey } from '@workspace/api-client-react';
 import { useQueryClient } from '@tanstack/react-query';

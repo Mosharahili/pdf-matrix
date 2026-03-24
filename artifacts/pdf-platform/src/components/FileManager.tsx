@@ -12,6 +12,7 @@ export function FileManager() {
   // Use a refetch interval if any conversion is processing
   const { data, isLoading, isError } = useListFiles({
     query: {
+      queryKey: ['listFiles', shouldPoll],
       refetchInterval: shouldPoll ? 2000 : false,
     }
   });
