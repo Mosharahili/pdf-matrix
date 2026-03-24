@@ -46,7 +46,7 @@ const upload = multer({
 router.get("/files", async (req, res): Promise<void> => {
   const files = await db.select().from(filesTable).orderBy(filesTable.uploadedAt);
   const filesWithConversions = await Promise.all(
-    files.map(async (file) => {
+    files.map(async (file: typeof filesTable.$inferSelect) => {
       const convs = await db
         .select()
         .from(conversionsTable)
