@@ -16,7 +16,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       {/* Background elements */}
       <div className="absolute top-0 left-0 w-full h-[500px] z-0 opacity-40 pointer-events-none">
         <img 
-          src={`${import.meta.env.BASE_URL}images/hero-bg.png`} 
+          src={`${import.meta.env.BASE_URL}hero-bg.png`} 
           alt="" 
           className="w-full h-full object-cover"
         />

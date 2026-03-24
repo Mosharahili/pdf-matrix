@@ -53,7 +53,7 @@ export function FileManager() {
         className="w-full max-w-3xl mx-auto mt-12 p-12 bg-white/50 backdrop-blur-sm rounded-3xl border border-border/50 text-center flex flex-col items-center justify-center shadow-lg shadow-blue-900/5"
       >
         <img 
-          src={`${import.meta.env.BASE_URL}images/empty-state.png`} 
+          src={`${import.meta.env.BASE_URL}empty-state.png`} 
           alt="No files" 
           className="w-48 h-48 object-contain mb-6 opacity-80"
         />
