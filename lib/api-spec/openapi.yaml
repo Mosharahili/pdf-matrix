@@ -3,13 +3,17 @@ info:
   # Do not change the title, if the title changes, the import paths will be broken
   title: Api
   version: 0.1.0
-  description: API specification
+  description: PDF Management & Conversion Platform API
 servers:
   - url: /api
     description: Base API path
 tags:
   - name: health
     description: Health operations
+  - name: files
+    description: File management operations
+  - name: conversions
+    description: PDF conversion operations
 paths:
   /healthz:
     get:
@@ -24,6 +28,227 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+
+  /files:
+    get:
+      operationId: listFiles
+      tags: [files]
+      summary: List all uploaded files
+      description: Returns all uploaded PDF files with their metadata
+      responses:
+        "200":
+          description: List of files
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  files:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/FileRecord"
+                required:
+                  - files
+
+  /files/upload:
+    post:
+      operationId: uploadFile
+      tags: [files]
+      summary: Upload a PDF file
+      description: Upload a PDF file for management and conversion
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+              required:
+                - file
+      responses:
+        "201":
+          description: File uploaded successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FileRecord"
+        "400":
+          description: Invalid file
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
+  /files/{fileId}:
+    get:
+      operationId: getFile
+      tags: [files]
+      summary: Get file details
+      description: Get metadata for a specific file
+      parameters:
+        - in: path
+          name: fileId
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: File details
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FileRecord"
+        "404":
+          description: File not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+    delete:
+      operationId: deleteFile
+      tags: [files]
+      summary: Delete a file
+      description: Delete an uploaded file and its conversions
+      parameters:
+        - in: path
+          name: fileId
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: File deleted
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                required:
+                  - success
+        "404":
+          description: File not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
+  /files/{fileId}/download:
+    get:
+      operationId: downloadOriginalFile
+      tags: [files]
+      summary: Download original PDF file
+      description: Download the original uploaded PDF
+      parameters:
+        - in: path
+          name: fileId
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: File download
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+        "404":
+          description: File not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
+  /conversions:
+    post:
+      operationId: startConversion
+      tags: [conversions]
+      summary: Start a PDF conversion
+      description: Start converting a PDF file to another format
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ConversionRequest"
+      responses:
+        "201":
+          description: Conversion started
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ConversionRecord"
+        "400":
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "404":
+          description: File not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
+  /conversions/{conversionId}:
+    get:
+      operationId: getConversionStatus
+      tags: [conversions]
+      summary: Get conversion status
+      description: Get the current status of a conversion job
+      parameters:
+        - in: path
+          name: conversionId
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Conversion status
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ConversionRecord"
+        "404":
+          description: Conversion not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
+  /conversions/{conversionId}/download:
+    get:
+      operationId: downloadConvertedFile
+      tags: [conversions]
+      summary: Download converted file
+      description: Download the converted output file
+      parameters:
+        - in: path
+          name: conversionId
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Converted file download
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+        "404":
+          description: Conversion not found or not ready
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
 components:
   schemas:
     HealthStatus:
@@ -34,3 +259,98 @@ components:
       required:
         - status
 
+    FileRecord:
+      type: object
+      properties:
+        id:
+          type: integer
+        originalName:
+          type: string
+        storedPath:
+          type: string
+        sizeBytes:
+          type: integer
+        uploadedAt:
+          type: string
+          format: date-time
+        conversions:
+          type: array
+          items:
+            $ref: "#/components/schemas/ConversionRecord"
+      required:
+        - id
+        - originalName
+        - storedPath
+        - sizeBytes
+        - uploadedAt
+
+    ConversionRecord:
+      type: object
+      properties:
+        id:
+          type: integer
+        fileId:
+          type: integer
+        outputFormat:
+          $ref: "#/components/schemas/OutputFormat"
+        status:
+          $ref: "#/components/schemas/ConversionStatus"
+        convertedPath:
+          type: string
+          nullable: true
+        errorMessage:
+          type: string
+          nullable: true
+        createdAt:
+          type: string
+          format: date-time
+        completedAt:
+          type: string
+          format: date-time
+          nullable: true
+      required:
+        - id
+        - fileId
+        - outputFormat
+        - status
+        - createdAt
+
+    ConversionRequest:
+      type: object
+      properties:
+        fileId:
+          type: integer
+        outputFormat:
+          $ref: "#/components/schemas/OutputFormat"
+      required:
+        - fileId
+        - outputFormat
+
+    OutputFormat:
+      type: string
+      enum:
+        - docx
+        - xlsx
+        - pptx
+        - png
+        - jpg
+        - txt
+
+    ConversionStatus:
+      type: string
+      enum:
+        - pending
+        - processing
+        - completed
+        - failed
+
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+        message:
+          type: string
+      required:
+        - error
+        - message
