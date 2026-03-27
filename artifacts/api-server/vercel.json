@@ -1,7 +1,9 @@
 {
-  "buildCommand": "node ./build.mjs",
-  "rewrites": [
-    { "source": "/", "destination": "/api/index.js" },
-    { "source": "/(.*)", "destination": "/api/index.js" }
-  ]
+  "buildCommand": "pnpm -r build",
+  "outputDirectory": "artifacts/api-server/dist",
+  "functions": {
+    "artifacts/api-server/api/index.js": {
+      "runtime": "nodejs20.x"
+    }
+  }
 }
