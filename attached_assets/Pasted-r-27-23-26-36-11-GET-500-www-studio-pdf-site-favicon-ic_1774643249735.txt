@@ -1,0 +1,210 @@
+r 27 23:26:36.11
+GET
+500
+www.studio-pdf.site
+/favicon.ico
+Error: DATABASE_URL must be set. Did you forget to provision a database? at file:///var/task/artifacts/api-server/dist/serverless.mjs:72313:9 at ModuleJob.run (node:internal/modules/esm/module_job:413:25) at process.processTicksAndRejections (node:internal/process/task_queues:103:5) at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:660:26) at async d (/opt/rust/nodejs.js:17:25176) Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:26:35.05
+GET
+500
+www.studio-pdf.site
+/
+Error [ERR_UNSUPPORTED_DIR_IMPORT]: Directory import '/var/task/artifacts/api-server/src/routes' is not supported resolving ES modules imported from /var/task/artifacts/api-server/src/app.js at finalizeResolution (node:internal/modules/esm/resolve:268:11) at moduleResolve (node:internal/modules/esm/resolve:870:10) at moduleResolveWithNodePath (node:internal/modules/esm/resolve:996:14) at defaultResolve (node:internal/modules/esm/resolve:1039:79) at #cachedDefaultResolve (node:internal/modules/esm/loader:718:20) at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:735:38) at ModuleLoader.resolveSync (node:internal/modules/esm/loader:764:52) at #resolve (node:internal/modules/esm/loader:700:17) at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:620:35) at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33) { code: 'ERR_UNSUPPORTED_DIR_IMPORT', url: 'file:///var/task/artifacts/api-server/src/routes' } Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:26:28.97
+GET
+500
+www.studio-pdf.site
+/
+Error [ERR_UNSUPPORTED_DIR_IMPORT]: Directory import '/var/task/artifacts/api-server/src/routes' is not supported resolving ES modules imported from /var/task/artifacts/api-server/src/app.js at finalizeResolution (node:internal/modules/esm/resolve:268:11) at moduleResolve (node:internal/modules/esm/resolve:870:10) at moduleResolveWithNodePath (node:internal/modules/esm/resolve:996:14) at defaultResolve (node:internal/modules/esm/resolve:1039:79) at #cachedDefaultResolve (node:internal/modules/esm/loader:718:20) at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:735:38) at ModuleLoader.resolveSync (node:internal/modules/esm/loader:764:52) at #resolve (node:internal/modules/esm/loader:700:17) at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:620:35) at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33) { code: 'ERR_UNSUPPORTED_DIR_IMPORT', url: 'file:///var/task/artifacts/api-server/src/routes' } Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:26:00.11
+GET
+500
+www.studio-pdf.site
+/favicon.png
+Error: DATABASE_URL must be set. Did you forget to provision a database? at file:///var/task/artifacts/api-server/dist/serverless.mjs:72313:9 at ModuleJob.run (node:internal/modules/esm/module_job:413:25) at process.processTicksAndRejections (node:internal/process/task_queues:103:5) at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:660:26) at async d (/opt/rust/nodejs.js:17:25176) Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:25:59.71
+GET
+500
+www.studio-pdf.site
+/favicon.ico
+Error: DATABASE_URL must be set. Did you forget to provision a database? at file:///var/task/artifacts/api-server/dist/serverless.mjs:72313:9 at ModuleJob.run (node:internal/modules/esm/module_job:413:25) at process.processTicksAndRejections (node:internal/process/task_queues:103:5) at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:660:26) at async d (/opt/rust/nodejs.js:17:25176) Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:25:59.44
+GET
+500
+www.studio-pdf.site
+/
+Error [ERR_UNSUPPORTED_DIR_IMPORT]: Directory import '/var/task/artifacts/api-server/src/routes' is not supported resolving ES modules imported from /var/task/artifacts/api-server/src/app.js at finalizeResolution (node:internal/modules/esm/resolve:268:11) at moduleResolve (node:internal/modules/esm/resolve:870:10) at moduleResolveWithNodePath (node:internal/modules/esm/resolve:996:14) at defaultResolve (node:internal/modules/esm/resolve:1039:79) at #cachedDefaultResolve (node:internal/modules/esm/loader:718:20) at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:735:38) at ModuleLoader.resolveSync (node:internal/modules/esm/loader:764:52) at #resolve (node:internal/modules/esm/loader:700:17) at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:620:35) at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33) { code: 'ERR_UNSUPPORTED_DIR_IMPORT', url: 'file:///var/task/artifacts/api-server/src/routes' } Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:25:50.82
+GET
+500
+www.studio-pdf.site
+/wp-admin/setup-config.php
+Error: DATABASE_URL must be set. Did you forget to provision a database? at file:///var/task/artifacts/api-server/dist/serverless.mjs:72313:9 at ModuleJob.run (node:internal/modules/esm/module_job:413:25) at process.processTicksAndRejections (node:internal/process/task_queues:103:5) at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:660:26) at async d (/opt/rust/nodejs.js:17:25176) Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:24:37.19
+GET
+500
+www.studio-pdf.site
+/wordpress/wp-admin/setup-config.php
+Error: DATABASE_URL must be set. Did you forget to provision a database? at file:///var/task/artifacts/api-server/dist/serverless.mjs:72313:9 at ModuleJob.run (node:internal/modules/esm/module_job:413:25) at process.processTicksAndRejections (node:internal/process/task_queues:103:5) at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:660:26) at async d (/opt/rust/nodejs.js:17:25176) Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:21:42.08
+GET
+500
+pdf-matrix-api-server-bbbq-9mjtccfhv.vercel.app
+/favicon.png
+Error: DATABASE_URL must be set. Did you forget to provision a database? at file:///var/task/artifacts/api-server/dist/serverless.mjs:72313:9 at ModuleJob.run (node:internal/modules/esm/module_job:413:25) at process.processTicksAndRejections (node:internal/process/task_queues:103:5) at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:660:26) at async d (/opt/rust/nodejs.js:17:25176) Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:21:39.63
+GET
+500
+pdf-matrix-api-server-bbbq-9mjtccfhv.vercel.app
+/favicon.png
+Error: DATABASE_URL must be set. Did you forget to provision a database? at file:///var/task/artifacts/api-server/dist/serverless.mjs:72313:9 at ModuleJob.run (node:internal/modules/esm/module_job:413:25) at process.processTicksAndRejections (node:internal/process/task_queues:103:5) at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:660:26) at async d (/opt/rust/nodejs.js:17:25176) Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:21:38.20
+GET
+500
+pdf-matrix-api-server-bbbq-9mjtccfhv.vercel.app
+/favicon.png
+Error: DATABASE_URL must be set. Did you forget to provision a database? at file:///var/task/artifacts/api-server/dist/serverless.mjs:72313:9 at ModuleJob.run (node:internal/modules/esm/module_job:413:25) at process.processTicksAndRejections (node:internal/process/task_queues:103:5) at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:660:26) at async d (/opt/rust/nodejs.js:17:25176) Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:21:37.75
+GET
+500
+pdf-matrix-api-server-bbbq-9mjtccfhv.vercel.app
+/favicon.ico
+Error: DATABASE_URL must be set. Did you forget to provision a database? at file:///var/task/artifacts/api-server/dist/serverless.mjs:72313:9 at ModuleJob.run (node:internal/modules/esm/module_job:413:25) at process.processTicksAndRejections (node:internal/process/task_queues:103:5) at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:660:26) at async d (/opt/rust/nodejs.js:17:25176) Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:21:35.21
+GET
+500
+pdf-matrix-api-server-bbbq-9mjtccfhv.vercel.app
+/favicon.ico
+Error: DATABASE_URL must be set. Did you forget to provision a database? at file:///var/task/artifacts/api-server/dist/serverless.mjs:72313:9 at ModuleJob.run (node:internal/modules/esm/module_job:413:25) at process.processTicksAndRejections (node:internal/process/task_queues:103:5) at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:660:26) at async d (/opt/rust/nodejs.js:17:25176) Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:21:33.73
+GET
+500
+pdf-matrix-api-server-bbbq-9mjtccfhv.vercel.app
+/favicon.ico
+Error: DATABASE_URL must be set. Did you forget to provision a database? at file:///var/task/artifacts/api-server/dist/serverless.mjs:72313:9 at ModuleJob.run (node:internal/modules/esm/module_job:413:25) at process.processTicksAndRejections (node:internal/process/task_queues:103:5) at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:660:26) at async d (/opt/rust/nodejs.js:17:25176) Node.js process exited with exit status: 1. The logs above can help with debugging the issue. Error: DATABASE_URL must be set. Did you forget to provision a database? at file:///var/task/artifacts/api-server/dist/serverless.mjs:72313:9 at ModuleJob.run (node:internal/modules/esm/module_job:413:25) at process.processTicksAndRejections (node:internal/process/task_queues:103:5) at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:660:26) at async d (/opt/rust/nodejs.js:17:25176) Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:21:33.65
+GET
+500
+pdf-matrix-api-server-bbbq-9mjtccfhv.vercel.app
+/favicon.png
+Error: DATABASE_URL must be set. Did you forget to provision a database? at file:///var/task/artifacts/api-server/dist/serverless.mjs:72313:9 at ModuleJob.run (node:internal/modules/esm/module_job:413:25) at process.processTicksAndRejections (node:internal/process/task_queues:103:5) at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:660:26) at async d (/opt/rust/nodejs.js:17:25176) Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:21:33.34
+GET
+500
+pdf-matrix-api-server-bbbq-9mjtccfhv.vercel.app
+/
+Error [ERR_UNSUPPORTED_DIR_IMPORT]: Directory import '/var/task/artifacts/api-server/src/routes' is not supported resolving ES modules imported from /var/task/artifacts/api-server/src/app.js at finalizeResolution (node:internal/modules/esm/resolve:268:11) at moduleResolve (node:internal/modules/esm/resolve:870:10) at moduleResolveWithNodePath (node:internal/modules/esm/resolve:996:14) at defaultResolve (node:internal/modules/esm/resolve:1039:79) at #cachedDefaultResolve (node:internal/modules/esm/loader:718:20) at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:735:38) at ModuleLoader.resolveSync (node:internal/modules/esm/loader:764:52) at #resolve (node:internal/modules/esm/loader:700:17) at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:620:35) at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33) { code: 'ERR_UNSUPPORTED_DIR_IMPORT', url: 'file:///var/task/artifacts/api-server/src/routes' } Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:21:32.00
+GET
+500
+pdf-matrix-api-server-bbbq-9mjtccfhv.vercel.app
+/
+Error [ERR_UNSUPPORTED_DIR_IMPORT]: Directory import '/var/task/artifacts/api-server/src/routes' is not supported resolving ES modules imported from /var/task/artifacts/api-server/src/app.js at finalizeResolution (node:internal/modules/esm/resolve:268:11) at moduleResolve (node:internal/modules/esm/resolve:870:10) at moduleResolveWithNodePath (node:internal/modules/esm/resolve:996:14) at defaultResolve (node:internal/modules/esm/resolve:1039:79) at #cachedDefaultResolve (node:internal/modules/esm/loader:718:20) at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:735:38) at ModuleLoader.resolveSync (node:internal/modules/esm/loader:764:52) at #resolve (node:internal/modules/esm/loader:700:17) at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:620:35) at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33) { code: 'ERR_UNSUPPORTED_DIR_IMPORT', url: 'file:///var/task/artifacts/api-server/src/routes' } Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:21:31.23
+GET
+500
+pdf-matrix-api-server-bbbq-9mjtccfhv.vercel.app
+/favicon.png
+Error: DATABASE_URL must be set. Did you forget to provision a database? at file:///var/task/artifacts/api-server/dist/serverless.mjs:72313:9 at ModuleJob.run (node:internal/modules/esm/module_job:413:25) at process.processTicksAndRejections (node:internal/process/task_queues:103:5) at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:660:26) at async d (/opt/rust/nodejs.js:17:25176) Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:21:29.79
+GET
+500
+pdf-matrix-api-server-bbbq-9mjtccfhv.vercel.app
+/favicon.png
+Error: DATABASE_URL must be set. Did you forget to provision a database? at file:///var/task/artifacts/api-server/dist/serverless.mjs:72313:9 at ModuleJob.run (node:internal/modules/esm/module_job:413:25) at process.processTicksAndRejections (node:internal/process/task_queues:103:5) at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:660:26) at async d (/opt/rust/nodejs.js:17:25176) Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:21:29.30
+GET
+500
+pdf-matrix-api-server-bbbq-9mjtccfhv.vercel.app
+/favicon.ico
+Error: DATABASE_URL must be set. Did you forget to provision a database? at file:///var/task/artifacts/api-server/dist/serverless.mjs:72313:9 at ModuleJob.run (node:internal/modules/esm/module_job:413:25) at process.processTicksAndRejections (node:internal/process/task_queues:103:5) at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:660:26) at async d (/opt/rust/nodejs.js:17:25176) Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:21:26.88
+GET
+500
+pdf-matrix-api-server-bbbq-9mjtccfhv.vercel.app
+/favicon.ico
+Error: DATABASE_URL must be set. Did you forget to provision a database? at file:///var/task/artifacts/api-server/dist/serverless.mjs:72313:9 at ModuleJob.run (node:internal/modules/esm/module_job:413:25) at process.processTicksAndRejections (node:internal/process/task_queues:103:5) at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:660:26) at async d (/opt/rust/nodejs.js:17:25176) Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:21:26.16
+GET
+500
+www.studio-pdf.site
+/wp-admin/setup-config.php
+Error: DATABASE_URL must be set. Did you forget to provision a database? at file:///var/task/artifacts/api-server/dist/serverless.mjs:72313:9 at ModuleJob.run (node:internal/modules/esm/module_job:413:25) at process.processTicksAndRejections (node:internal/process/task_queues:103:5) at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:660:26) at async d (/opt/rust/nodejs.js:17:25176) Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:21:25.39
+GET
+500
+pdf-matrix-api-server-bbbq-9mjtccfhv.vercel.app
+/favicon.ico
+Error: DATABASE_URL must be set. Did you forget to provision a database? at file:///var/task/artifacts/api-server/dist/serverless.mjs:72313:9 at ModuleJob.run (node:internal/modules/esm/module_job:413:25) at process.processTicksAndRejections (node:internal/process/task_queues:103:5) at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:660:26) at async d (/opt/rust/nodejs.js:17:25176) Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:21:24.95
+GET
+500
+pdf-matrix-api-server-bbbq-9mjtccfhv.vercel.app
+/
+Error [ERR_UNSUPPORTED_DIR_IMPORT]: Directory import '/var/task/artifacts/api-server/src/routes' is not supported resolving ES modules imported from /var/task/artifacts/api-server/src/app.js at finalizeResolution (node:internal/modules/esm/resolve:268:11) at moduleResolve (node:internal/modules/esm/resolve:870:10) at moduleResolveWithNodePath (node:internal/modules/esm/resolve:996:14) at defaultResolve (node:internal/modules/esm/resolve:1039:79) at #cachedDefaultResolve (node:internal/modules/esm/loader:718:20) at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:735:38) at ModuleLoader.resolveSync (node:internal/modules/esm/loader:764:52) at #resolve (node:internal/modules/esm/loader:700:17) at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:620:35) at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33) { code: 'ERR_UNSUPPORTED_DIR_IMPORT', url: 'file:///var/task/artifacts/api-server/src/routes' } Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:21:23.63
+GET
+500
+pdf-matrix-api-server-bbbq-9mjtccfhv.vercel.app
+/
+Error [ERR_UNSUPPORTED_DIR_IMPORT]: Directory import '/var/task/artifacts/api-server/src/routes' is not supported resolving ES modules imported from /var/task/artifacts/api-server/src/app.js at finalizeResolution (node:internal/modules/esm/resolve:268:11) at moduleResolve (node:internal/modules/esm/resolve:870:10) at moduleResolveWithNodePath (node:internal/modules/esm/resolve:996:14) at defaultResolve (node:internal/modules/esm/resolve:1039:79) at #cachedDefaultResolve (node:internal/modules/esm/loader:718:20) at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:735:38) at ModuleLoader.resolveSync (node:internal/modules/esm/loader:764:52) at #resolve (node:internal/modules/esm/loader:700:17) at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:620:35) at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33) { code: 'ERR_UNSUPPORTED_DIR_IMPORT', url: 'file:///var/task/artifacts/api-server/src/routes' } Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:21:20.25
+GET
+500
+www.studio-pdf.site
+/wordpress/wp-admin/setup-config.php
+Error: DATABASE_URL must be set. Did you forget to provision a database? at file:///var/task/artifacts/api-server/dist/serverless.mjs:72313:9 at ModuleJob.run (node:internal/modules/esm/module_job:413:25) at process.processTicksAndRejections (node:internal/process/task_queues:103:5) at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:660:26) at async d (/opt/rust/nodejs.js:17:25176) Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:18:46.47
+GET
+500
+www.studio-pdf.site
+/wp-admin/setup-config.php
+Error: DATABASE_URL must be set. Did you forget to provision a database? at file:///var/task/artifacts/api-server/dist/serverless.mjs:72313:9 at ModuleJob.run (node:internal/modules/esm/module_job:413:25) at process.processTicksAndRejections (node:internal/process/task_queues:103:5) at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:660:26) at async d (/opt/rust/nodejs.js:17:25176) Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:17:05.25
+GET
+500
+pdf-matrix-api-server-bbbq-9mjtccfhv.vercel.app
+/favicon.ico
+Error: DATABASE_URL must be set. Did you forget to provision a database? at file:///var/task/artifacts/api-server/dist/serverless.mjs:72313:9 at ModuleJob.run (node:internal/modules/esm/module_job:413:25) at process.processTicksAndRejections (node:internal/process/task_queues:103:5) at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:660:26) at async d (/opt/rust/nodejs.js:17:25176) Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:17:04.91
+GET
+500
+pdf-matrix-api-server-bbbq-9mjtccfhv.vercel.app
+/favicon.ico
+Error: DATABASE_URL must be set. Did you forget to provision a database? at file:///var/task/artifacts/api-server/dist/serverless.mjs:72313:9 at ModuleJob.run (node:internal/modules/esm/module_job:413:25) at process.processTicksAndRejections (node:internal/process/task_queues:103:5) at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:660:26) at async d (/opt/rust/nodejs.js:17:25176) Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:17:04.79
+GET
+500
+pdf-matrix-api-server-bbbq-9mjtccfhv.vercel.app
+/
+Error [ERR_UNSUPPORTED_DIR_IMPORT]: Directory import '/var/task/artifacts/api-server/src/routes' is not supported resolving ES modules imported from /var/task/artifacts/api-server/src/app.js at finalizeResolution (node:internal/modules/esm/resolve:268:11) at moduleResolve (node:internal/modules/esm/resolve:870:10) at moduleResolveWithNodePath (node:internal/modules/esm/resolve:996:14) at defaultResolve (node:internal/modules/esm/resolve:1039:79) at #cachedDefaultResolve (node:internal/modules/esm/loader:718:20) at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:735:38) at ModuleLoader.resolveSync (node:internal/modules/esm/loader:764:52) at #resolve (node:internal/modules/esm/loader:700:17) at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:620:35) at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33) { code: 'ERR_UNSUPPORTED_DIR_IMPORT', url: 'file:///var/task/artifacts/api-server/src/routes' } Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:17:04.56
+GET
+500
+pdf-matrix-api-server-bbbq-9mjtccfhv.vercel.app
+/
+Error [ERR_UNSUPPORTED_DIR_IMPORT]: Directory import '/var/task/artifacts/api-server/src/routes' is not supported resolving ES modules imported from /var/task/artifacts/api-server/src/app.js at finalizeResolution (node:internal/modules/esm/resolve:268:11) at moduleResolve (node:internal/modules/esm/resolve:870:10) at moduleResolveWithNodePath (node:internal/modules/esm/resolve:996:14) at defaultResolve (node:internal/modules/esm/resolve:1039:79) at #cachedDefaultResolve (node:internal/modules/esm/loader:718:20) at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:735:38) at ModuleLoader.resolveSync (node:internal/modules/esm/loader:764:52) at #resolve (node:internal/modules/esm/loader:700:17) at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:620:35) at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33) { code: 'ERR_UNSUPPORTED_DIR_IMPORT', url: 'file:///var/task/artifacts/api-server/src/routes' } Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:17:04.04
+GET
+500
+pdf-matrix-api-server-bbbq-9mjtccfhv.vercel.app
+/
+Error [ERR_UNSUPPORTED_DIR_IMPORT]: Directory import '/var/task/artifacts/api-server/src/routes' is not supported resolving ES modules imported from /var/task/artifacts/api-server/src/app.js at finalizeResolution (node:internal/modules/esm/resolve:268:11) at moduleResolve (node:internal/modules/esm/resolve:870:10) at moduleResolveWithNodePath (node:internal/modules/esm/resolve:996:14) at defaultResolve (node:internal/modules/esm/resolve:1039:79) at #cachedDefaultResolve (node:internal/modules/esm/loader:718:20) at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:735:38) at ModuleLoader.resolveSync (node:internal/modules/esm/loader:764:52) at #resolve (node:internal/modules/esm/loader:700:17) at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:620:35) at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33) { code: 'ERR_UNSUPPORTED_DIR_IMPORT', url: 'file:///var/task/artifacts/api-server/src/routes' } Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:17:03.97
+GET
+500
+pdf-matrix-api-server-bbbq-9mjtccfhv.vercel.app
+/
+Error [ERR_UNSUPPORTED_DIR_IMPORT]: Directory import '/var/task/artifacts/api-server/src/routes' is not supported resolving ES modules imported from /var/task/artifacts/api-server/src/app.js at finalizeResolution (node:internal/modules/esm/resolve:268:11) at moduleResolve (node:internal/modules/esm/resolve:870:10) at moduleResolveWithNodePath (node:internal/modules/esm/resolve:996:14) at defaultResolve (node:internal/modules/esm/resolve:1039:79) at #cachedDefaultResolve (node:internal/modules/esm/loader:718:20) at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:735:38) at ModuleLoader.resolveSync (node:internal/modules/esm/loader:764:52) at #resolve (node:internal/modules/esm/loader:700:17) at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:620:35) at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33) { code: 'ERR_UNSUPPORTED_DIR_IMPORT', url: 'file:///var/task/artifacts/api-server/src/routes' } Node.js process exited with exit status: 1. The logs above can help with debugging the issue. Error [ERR_UNSUPPORTED_DIR_IMPORT]: Directory import '/var/task/artifacts/api-server/src/routes' is not supported resolving ES modules imported from /var/task/artifacts/api-server/src/app.js at finalizeResolution (node:internal/modules/esm/resolve:268:11) at moduleResolve (node:internal/modules/esm/resolve:870:10) at moduleResolveWithNodePath (node:internal/modules/esm/resolve:996:14) at defaultResolve (node:internal/modules/esm/resolve:1039:79) at #cachedDefaultResolve (node:internal/modules/esm/loader:718:20) at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:735:38) at ModuleLoader.resolveSync (node:internal/modules/esm/loader:764:52) at #resolve (node:internal/modules/esm/loader:700:17) at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:620:35) at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33) { code: 'ERR_UNSUPPORTED_DIR_IMPORT', url: 'file:///var/task/artifacts/api-server/src/routes' } Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:17:03.78
+GET
+500
+pdf-matrix-api-server-bbbq-9mjtccfhv.vercel.app
+/
+Error [ERR_UNSUPPORTED_DIR_IMPORT]: Directory import '/var/task/artifacts/api-server/src/routes' is not supported resolving ES modules imported from /var/task/artifacts/api-server/src/app.js at finalizeResolution (node:internal/modules/esm/resolve:268:11) at moduleResolve (node:internal/modules/esm/resolve:870:10) at moduleResolveWithNodePath (node:internal/modules/esm/resolve:996:14) at defaultResolve (node:internal/modules/esm/resolve:1039:79) at #cachedDefaultResolve (node:internal/modules/esm/loader:718:20) at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:735:38) at ModuleLoader.resolveSync (node:internal/modules/esm/loader:764:52) at #resolve (node:internal/modules/esm/loader:700:17) at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:620:35) at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33) { code: 'ERR_UNSUPPORTED_DIR_IMPORT', url: 'file:///var/task/artifacts/api-server/src/routes' } Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:17:03.69
+GET
+500
+pdf-matrix-api-server-bbbq-9mjtccfhv.vercel.app
+/
+Error [ERR_UNSUPPORTED_DIR_IMPORT]: Directory import '/var/task/artifacts/api-server/src/routes' is not supported resolving ES modules imported from /var/task/artifacts/api-server/src/app.js at finalizeResolution (node:internal/modules/esm/resolve:268:11) at moduleResolve (node:internal/modules/esm/resolve:870:10) at moduleResolveWithNodePath (node:internal/modules/esm/resolve:996:14) at defaultResolve (node:internal/modules/esm/resolve:1039:79) at #cachedDefaultResolve (node:internal/modules/esm/loader:718:20) at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:735:38) at ModuleLoader.resolveSync (node:internal/modules/esm/loader:764:52) at #resolve (node:internal/modules/esm/loader:700:17) at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:620:35) at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33) { code: 'ERR_UNSUPPORTED_DIR_IMPORT', url: 'file:///var/task/artifacts/api-server/src/routes' } Node.js process exited with exit status: 1. The logs above can help with debugging the issue. Error [ERR_UNSUPPORTED_DIR_IMPORT]: Directory import '/var/task/artifacts/api-server/src/routes' is not supported resolving ES modules imported from /var/task/artifacts/api-server/src/app.js at finalizeResolution (node:internal/modules/esm/resolve:268:11) at moduleResolve (node:internal/modules/esm/resolve:870:10) at moduleResolveWithNodePath (node:internal/modules/esm/resolve:996:14) at defaultResolve (node:internal/modules/esm/resolve:1039:79) at #cachedDefaultResolve (node:internal/modules/esm/loader:718:20) at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:735:38) at ModuleLoader.resolveSync (node:internal/modules/esm/loader:764:52) at #resolve (node:internal/modules/esm/loader:700:17) at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:620:35) at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33) { code: 'ERR_UNSUPPORTED_DIR_IMPORT', url: 'file:///var/task/artifacts/api-server/src/routes' } Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
