@@ -15,7 +15,9 @@ import {
 const execFileAsync = promisify(execFile);
 const router: IRouter = Router();
 
-const CONVERTED_DIR = path.join(process.cwd(), "converted");
+const CONVERTED_DIR = process.env.VERCEL
+  ? "/tmp/pdf-converted"
+  : path.join(process.cwd(), "converted");
 if (!fs.existsSync(CONVERTED_DIR)) {
   fs.mkdirSync(CONVERTED_DIR, { recursive: true });
 }
