@@ -1,6 +1,6 @@
 import express, { type Express, type Request, type Response, type NextFunction } from "express";
 import cors from "cors";
-import router from "./routes";
+import router from "./routes/index.js";
 import { logger } from "./lib/logger";
 
 const app: Express = express();

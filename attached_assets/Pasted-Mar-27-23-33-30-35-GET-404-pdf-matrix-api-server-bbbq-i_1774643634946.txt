@@ -1,0 +1,84 @@
+Mar 27 23:33:30.35
+GET
+404
+pdf-matrix-api-server-bbbq-it65smyie.vercel.app
+/favicon.ico
+{"level":30,"time":1774643610941,"pid":4,"hostname":"169.254.81.37","method":"GET","url":"/favicon.ico","statusCode":404,"duration":1,"msg":"request"}
+Mar 27 23:33:29.44
+GET
+500
+pdf-matrix-api-server-bbbq-it65smyie.vercel.app
+/
+Error [ERR_UNSUPPORTED_DIR_IMPORT]: Directory import '/var/task/artifacts/api-server/src/routes' is not supported resolving ES modules imported from /var/task/artifacts/api-server/src/app.js at finalizeResolution (node:internal/modules/esm/resolve:268:11) at moduleResolve (node:internal/modules/esm/resolve:870:10) at moduleResolveWithNodePath (node:internal/modules/esm/resolve:996:14) at defaultResolve (node:internal/modules/esm/resolve:1039:79) at #cachedDefaultResolve (node:internal/modules/esm/loader:718:20) at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:735:38) at ModuleLoader.resolveSync (node:internal/modules/esm/loader:764:52) at #resolve (node:internal/modules/esm/loader:700:17) at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:620:35) at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33) { code: 'ERR_UNSUPPORTED_DIR_IMPORT', url: 'file:///var/task/artifacts/api-server/src/routes' } Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:32:55.87
+GET
+404
+pdf-matrix-api-server-bbbq-it65smyie.vercel.app
+/favicon.png
+{"level":30,"time":1774643575936,"pid":4,"hostname":"169.254.81.37","method":"GET","url":"/favicon.png","statusCode":404,"duration":1,"msg":"request"}
+Mar 27 23:32:55.73
+GET
+404
+pdf-matrix-api-server-bbbq-it65smyie.vercel.app
+/favicon.ico
+{"level":30,"time":1774643575832,"pid":4,"hostname":"169.254.81.37","method":"GET","url":"/favicon.ico","statusCode":404,"duration":1,"msg":"request"}
+Mar 27 23:32:55.31
+GET
+500
+pdf-matrix-api-server-bbbq-it65smyie.vercel.app
+/
+Error [ERR_UNSUPPORTED_DIR_IMPORT]: Directory import '/var/task/artifacts/api-server/src/routes' is not supported resolving ES modules imported from /var/task/artifacts/api-server/src/app.js at finalizeResolution (node:internal/modules/esm/resolve:268:11) at moduleResolve (node:internal/modules/esm/resolve:870:10) at moduleResolveWithNodePath (node:internal/modules/esm/resolve:996:14) at defaultResolve (node:internal/modules/esm/resolve:1039:79) at #cachedDefaultResolve (node:internal/modules/esm/loader:718:20) at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:735:38) at ModuleLoader.resolveSync (node:internal/modules/esm/loader:764:52) at #resolve (node:internal/modules/esm/loader:700:17) at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:620:35) at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33) { code: 'ERR_UNSUPPORTED_DIR_IMPORT', url: 'file:///var/task/artifacts/api-server/src/routes' } Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:32:53.96
+GET
+500
+pdf-matrix-api-server-bbbq-it65smyie.vercel.app
+/
+Error [ERR_UNSUPPORTED_DIR_IMPORT]: Directory import '/var/task/artifacts/api-server/src/routes' is not supported resolving ES modules imported from /var/task/artifacts/api-server/src/app.js at finalizeResolution (node:internal/modules/esm/resolve:268:11) at moduleResolve (node:internal/modules/esm/resolve:870:10) at moduleResolveWithNodePath (node:internal/modules/esm/resolve:996:14) at defaultResolve (node:internal/modules/esm/resolve:1039:79) at #cachedDefaultResolve (node:internal/modules/esm/loader:718:20) at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:735:38) at ModuleLoader.resolveSync (node:internal/modules/esm/loader:764:52) at #resolve (node:internal/modules/esm/loader:700:17) at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:620:35) at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33) { code: 'ERR_UNSUPPORTED_DIR_IMPORT', url: 'file:///var/task/artifacts/api-server/src/routes' } Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:32:43.57
+GET
+404
+pdf-matrix-api-server-bbbq-it65smyie.vercel.app
+/favicon.ico
+{"level":30,"time":1774643563644,"pid":4,"hostname":"169.254.81.37","method":"GET","url":"/favicon.ico","statusCode":404,"duration":1,"msg":"request"}
+Mar 27 23:32:43.28
+GET
+500
+pdf-matrix-api-server-bbbq-it65smyie.vercel.app
+/
+Error [ERR_UNSUPPORTED_DIR_IMPORT]: Directory import '/var/task/artifacts/api-server/src/routes' is not supported resolving ES modules imported from /var/task/artifacts/api-server/src/app.js at finalizeResolution (node:internal/modules/esm/resolve:268:11) at moduleResolve (node:internal/modules/esm/resolve:870:10) at moduleResolveWithNodePath (node:internal/modules/esm/resolve:996:14) at defaultResolve (node:internal/modules/esm/resolve:1039:79) at #cachedDefaultResolve (node:internal/modules/esm/loader:718:20) at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:735:38) at ModuleLoader.resolveSync (node:internal/modules/esm/loader:764:52) at #resolve (node:internal/modules/esm/loader:700:17) at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:620:35) at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33) { code: 'ERR_UNSUPPORTED_DIR_IMPORT', url: 'file:///var/task/artifacts/api-server/src/routes' } Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:32:43.26
+GET
+404
+pdf-matrix-api-server-bbbq-it65smyie.vercel.app
+/favicon.ico
+{"level":30,"time":1774643563454,"pid":4,"hostname":"169.254.81.37","method":"GET","url":"/favicon.ico","statusCode":404,"duration":11,"msg":"request"}
+Mar 27 23:32:42.92
+GET
+500
+pdf-matrix-api-server-bbbq-it65smyie.vercel.app
+/
+Error [ERR_UNSUPPORTED_DIR_IMPORT]: Directory import '/var/task/artifacts/api-server/src/routes' is not supported resolving ES modules imported from /var/task/artifacts/api-server/src/app.js at finalizeResolution (node:internal/modules/esm/resolve:268:11) at moduleResolve (node:internal/modules/esm/resolve:870:10) at moduleResolveWithNodePath (node:internal/modules/esm/resolve:996:14) at defaultResolve (node:internal/modules/esm/resolve:1039:79) at #cachedDefaultResolve (node:internal/modules/esm/loader:718:20) at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:735:38) at ModuleLoader.resolveSync (node:internal/modules/esm/loader:764:52) at #resolve (node:internal/modules/esm/loader:700:17) at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:620:35) at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33) { code: 'ERR_UNSUPPORTED_DIR_IMPORT', url: 'file:///var/task/artifacts/api-server/src/routes' } Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:32:41.95
+GET
+500
+pdf-matrix-api-server-bbbq-it65smyie.vercel.app
+/
+Error [ERR_UNSUPPORTED_DIR_IMPORT]: Directory import '/var/task/artifacts/api-server/src/routes' is not supported resolving ES modules imported from /var/task/artifacts/api-server/src/app.js at finalizeResolution (node:internal/modules/esm/resolve:268:11) at moduleResolve (node:internal/modules/esm/resolve:870:10) at moduleResolveWithNodePath (node:internal/modules/esm/resolve:996:14) at defaultResolve (node:internal/modules/esm/resolve:1039:79) at #cachedDefaultResolve (node:internal/modules/esm/loader:718:20) at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:735:38) at ModuleLoader.resolveSync (node:internal/modules/esm/loader:764:52) at #resolve (node:internal/modules/esm/loader:700:17) at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:620:35) at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33) { code: 'ERR_UNSUPPORTED_DIR_IMPORT', url: 'file:///var/task/artifacts/api-server/src/routes' } Node.js process exited with exit status: 1. The logs above can help with debugging the issue. Error [ERR_UNSUPPORTED_DIR_IMPORT]: Directory import '/var/task/artifacts/api-server/src/routes' is not supported resolving ES modules imported from /var/task/artifacts/api-server/src/app.js at finalizeResolution (node:internal/modules/esm/resolve:268:11) at moduleResolve (node:internal/modules/esm/resolve:870:10) at moduleResolveWithNodePath (node:internal/modules/esm/resolve:996:14) at defaultResolve (node:internal/modules/esm/resolve:1039:79) at #cachedDefaultResolve (node:internal/modules/esm/loader:718:20) at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:735:38) at ModuleLoader.resolveSync (node:internal/modules/esm/loader:764:52) at #resolve (node:internal/modules/esm/loader:700:17) at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:620:35) at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33) { code: 'ERR_UNSUPPORTED_DIR_IMPORT', url: 'file:///var/task/artifacts/api-server/src/routes' } Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:32:41.92
+GET
+500
+pdf-matrix-api-server-bbbq-it65smyie.vercel.app
+/
+Error [ERR_UNSUPPORTED_DIR_IMPORT]: Directory import '/var/task/artifacts/api-server/src/routes' is not supported resolving ES modules imported from /var/task/artifacts/api-server/src/app.js at finalizeResolution (node:internal/modules/esm/resolve:268:11) at moduleResolve (node:internal/modules/esm/resolve:870:10) at moduleResolveWithNodePath (node:internal/modules/esm/resolve:996:14) at defaultResolve (node:internal/modules/esm/resolve:1039:79) at #cachedDefaultResolve (node:internal/modules/esm/loader:718:20) at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:735:38) at ModuleLoader.resolveSync (node:internal/modules/esm/loader:764:52) at #resolve (node:internal/modules/esm/loader:700:17) at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:620:35) at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33) { code: 'ERR_UNSUPPORTED_DIR_IMPORT', url: 'file:///var/task/artifacts/api-server/src/routes' } Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:32:41.91
+GET
+500
+pdf-matrix-api-server-bbbq-it65smyie.vercel.app
+/
+Error [ERR_UNSUPPORTED_DIR_IMPORT]: Directory import '/var/task/artifacts/api-server/src/routes' is not supported resolving ES modules imported from /var/task/artifacts/api-server/src/app.js at finalizeResolution (node:internal/modules/esm/resolve:268:11) at moduleResolve (node:internal/modules/esm/resolve:870:10) at moduleResolveWithNodePath (node:internal/modules/esm/resolve:996:14) at defaultResolve (node:internal/modules/esm/resolve:1039:79) at #cachedDefaultResolve (node:internal/modules/esm/loader:718:20) at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:735:38) at ModuleLoader.resolveSync (node:internal/modules/esm/loader:764:52) at #resolve (node:internal/modules/esm/loader:700:17) at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:620:35) at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33) { code: 'ERR_UNSUPPORTED_DIR_IMPORT', url: 'file:///var/task/artifacts/api-server/src/routes' } Node.js process exited with exit status: 1. The logs above can help with debugging the issue. Error [ERR_UNSUPPORTED_DIR_IMPORT]: Directory import '/var/task/artifacts/api-server/src/routes' is not supported resolving ES modules imported from /var/task/artifacts/api-server/src/app.js at finalizeResolution (node:internal/modules/esm/resolve:268:11) at moduleResolve (node:internal/modules/esm/resolve:870:10) at moduleResolveWithNodePath (node:internal/modules/esm/resolve:996:14) at defaultResolve (node:internal/modules/esm/resolve:1039:79) at #cachedDefaultResolve (node:internal/modules/esm/loader:718:20) at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:735:38) at ModuleLoader.resolveSync (node:internal/modules/esm/loader:764:52) at #resolve (node:internal/modules/esm/loader:700:17) at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:620:35) at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33) { code: 'ERR_UNSUPPORTED_DIR_IMPORT', url: 'file:///var/task/artifacts/api-server/src/routes' } Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:32:41.86
+GET
+500
+pdf-matrix-api-server-bbbq-it65smyie.vercel.app
+/
+Error [ERR_UNSUPPORTED_DIR_IMPORT]: Directory import '/var/task/artifacts/api-server/src/routes' is not supported resolving ES modules imported from /var/task/artifacts/api-server/src/app.js at finalizeResolution (node:internal/modules/esm/resolve:268:11) at moduleResolve (node:internal/modules/esm/resolve:870:10) at moduleResolveWithNodePath (node:internal/modules/esm/resolve:996:14) at defaultResolve (node:internal/modules/esm/resolve:1039:79) at #cachedDefaultResolve (node:internal/modules/esm/loader:718:20) at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:735:38) at ModuleLoader.resolveSync (node:internal/modules/esm/loader:764:52) at #resolve (node:internal/modules/esm/loader:700:17) at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:620:35) at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33) { code: 'ERR_UNSUPPORTED_DIR_IMPORT', url: 'file:///var/task/artifacts/api-server/src/routes' } Node.js process exited with exit status: 1. The logs above can help with debugging the issue. Error [ERR_UNSUPPORTED_DIR_IMPORT]: Directory import '/var/task/artifacts/api-server/src/routes' is not supported resolving ES modules imported from /var/task/artifacts/api-server/src/app.js at finalizeResolution (node:internal/modules/esm/resolve:268:11) at moduleResolve (node:internal/modules/esm/resolve:870:10) at moduleResolveWithNodePath (node:internal/modules/esm/resolve:996:14) at defaultResolve (node:internal/modules/esm/resolve:1039:79) at #cachedDefaultResolve (node:internal/modules/esm/loader:718:20) at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:735:38) at ModuleLoader.resolveSync (node:internal/modules/esm/loader:764:52) at #resolve (node:internal/modules/esm/loader:700:17) at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:620:35) at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33) { code: 'ERR_UNSUPPORTED_DIR_IMPORT', url: 'file:///var/task/artifacts/api-server/src/routes' } Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
