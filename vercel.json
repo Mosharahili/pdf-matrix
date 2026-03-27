@@ -2,7 +2,6 @@
   "buildCommand": "node artifacts/api-server/build.mjs",
   "functions": {
     "api/index.js": {
-      "runtime": "nodejs20.x",
       "includeFiles": "artifacts/api-server/dist/**"
     }
   },
