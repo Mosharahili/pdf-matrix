@@ -1,0 +1,84 @@
+Mar 27 23:41:37.72
+GET
+404
+pdf-matrix-api-server-bbbq-f9x3jmm2r.vercel.app
+/favicon.ico
+{"level":30,"time":1774644098287,"pid":4,"hostname":"169.254.65.33","method":"GET","url":"/favicon.ico","statusCode":404,"duration":1,"msg":"request"}
+Mar 27 23:41:36.89
+GET
+500
+pdf-matrix-api-server-bbbq-f9x3jmm2r.vercel.app
+/
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/var/task/artifacts/api-server/src/routes/health' imported from /var/task/artifacts/api-server/src/routes/index.js at finalizeResolution (node:internal/modules/esm/resolve:280:11) at moduleResolve (node:internal/modules/esm/resolve:870:10) at moduleResolveWithNodePath (node:internal/modules/esm/resolve:996:14) at defaultResolve (node:internal/modules/esm/resolve:1039:79) at #cachedDefaultResolve (node:internal/modules/esm/loader:718:20) at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:735:38) at ModuleLoader.resolveSync (node:internal/modules/esm/loader:764:52) at #resolve (node:internal/modules/esm/loader:700:17) at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:620:35) at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33) { code: 'ERR_MODULE_NOT_FOUND', url: 'file:///var/task/artifacts/api-server/src/routes/health' } Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:41:14.13
+GET
+404
+pdf-matrix-api-server-bbbq-f9x3jmm2r.vercel.app
+/favicon.png
+{"level":30,"time":1774644074195,"pid":4,"hostname":"169.254.65.33","method":"GET","url":"/favicon.png","statusCode":404,"duration":1,"msg":"request"}
+Mar 27 23:41:14.02
+GET
+404
+pdf-matrix-api-server-bbbq-f9x3jmm2r.vercel.app
+/favicon.ico
+{"level":30,"time":1774644074081,"pid":4,"hostname":"169.254.65.33","method":"GET","url":"/favicon.ico","statusCode":404,"duration":1,"msg":"request"}
+Mar 27 23:41:13.62
+GET
+500
+pdf-matrix-api-server-bbbq-f9x3jmm2r.vercel.app
+/
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/var/task/artifacts/api-server/src/routes/health' imported from /var/task/artifacts/api-server/src/routes/index.js at finalizeResolution (node:internal/modules/esm/resolve:280:11) at moduleResolve (node:internal/modules/esm/resolve:870:10) at moduleResolveWithNodePath (node:internal/modules/esm/resolve:996:14) at defaultResolve (node:internal/modules/esm/resolve:1039:79) at #cachedDefaultResolve (node:internal/modules/esm/loader:718:20) at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:735:38) at ModuleLoader.resolveSync (node:internal/modules/esm/loader:764:52) at #resolve (node:internal/modules/esm/loader:700:17) at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:620:35) at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33) { code: 'ERR_MODULE_NOT_FOUND', url: 'file:///var/task/artifacts/api-server/src/routes/health' } Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:41:12.25
+GET
+500
+pdf-matrix-api-server-bbbq-f9x3jmm2r.vercel.app
+/
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/var/task/artifacts/api-server/src/routes/health' imported from /var/task/artifacts/api-server/src/routes/index.js at finalizeResolution (node:internal/modules/esm/resolve:280:11) at moduleResolve (node:internal/modules/esm/resolve:870:10) at moduleResolveWithNodePath (node:internal/modules/esm/resolve:996:14) at defaultResolve (node:internal/modules/esm/resolve:1039:79) at #cachedDefaultResolve (node:internal/modules/esm/loader:718:20) at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:735:38) at ModuleLoader.resolveSync (node:internal/modules/esm/loader:764:52) at #resolve (node:internal/modules/esm/loader:700:17) at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:620:35) at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33) { code: 'ERR_MODULE_NOT_FOUND', url: 'file:///var/task/artifacts/api-server/src/routes/health' } Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:41:08.32
+GET
+404
+pdf-matrix-api-server-bbbq-f9x3jmm2r.vercel.app
+/favicon.ico
+{"level":30,"time":1774644068453,"pid":4,"hostname":"169.254.65.33","method":"GET","url":"/favicon.ico","statusCode":404,"duration":1,"msg":"request"}
+Mar 27 23:41:08.20
+GET
+404
+pdf-matrix-api-server-bbbq-f9x3jmm2r.vercel.app
+/favicon.ico
+{"level":30,"time":1774644068438,"pid":4,"hostname":"169.254.65.33","method":"GET","url":"/favicon.ico","statusCode":404,"duration":13,"msg":"request"}
+Mar 27 23:41:08.01
+GET
+500
+pdf-matrix-api-server-bbbq-f9x3jmm2r.vercel.app
+/
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/var/task/artifacts/api-server/src/routes/health' imported from /var/task/artifacts/api-server/src/routes/index.js at finalizeResolution (node:internal/modules/esm/resolve:280:11) at moduleResolve (node:internal/modules/esm/resolve:870:10) at moduleResolveWithNodePath (node:internal/modules/esm/resolve:996:14) at defaultResolve (node:internal/modules/esm/resolve:1039:79) at #cachedDefaultResolve (node:internal/modules/esm/loader:718:20) at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:735:38) at ModuleLoader.resolveSync (node:internal/modules/esm/loader:764:52) at #resolve (node:internal/modules/esm/loader:700:17) at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:620:35) at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33) { code: 'ERR_MODULE_NOT_FOUND', url: 'file:///var/task/artifacts/api-server/src/routes/health' } Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:41:07.77
+GET
+500
+pdf-matrix-api-server-bbbq-f9x3jmm2r.vercel.app
+/
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/var/task/artifacts/api-server/src/routes/health' imported from /var/task/artifacts/api-server/src/routes/index.js at finalizeResolution (node:internal/modules/esm/resolve:280:11) at moduleResolve (node:internal/modules/esm/resolve:870:10) at moduleResolveWithNodePath (node:internal/modules/esm/resolve:996:14) at defaultResolve (node:internal/modules/esm/resolve:1039:79) at #cachedDefaultResolve (node:internal/modules/esm/loader:718:20) at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:735:38) at ModuleLoader.resolveSync (node:internal/modules/esm/loader:764:52) at #resolve (node:internal/modules/esm/loader:700:17) at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:620:35) at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33) { code: 'ERR_MODULE_NOT_FOUND', url: 'file:///var/task/artifacts/api-server/src/routes/health' } Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:41:07.16
+GET
+500
+pdf-matrix-api-server-bbbq-f9x3jmm2r.vercel.app
+/
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/var/task/artifacts/api-server/src/routes/health' imported from /var/task/artifacts/api-server/src/routes/index.js at finalizeResolution (node:internal/modules/esm/resolve:280:11) at moduleResolve (node:internal/modules/esm/resolve:870:10) at moduleResolveWithNodePath (node:internal/modules/esm/resolve:996:14) at defaultResolve (node:internal/modules/esm/resolve:1039:79) at #cachedDefaultResolve (node:internal/modules/esm/loader:718:20) at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:735:38) at ModuleLoader.resolveSync (node:internal/modules/esm/loader:764:52) at #resolve (node:internal/modules/esm/loader:700:17) at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:620:35) at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33) { code: 'ERR_MODULE_NOT_FOUND', url: 'file:///var/task/artifacts/api-server/src/routes/health' } Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:41:07.15
+GET
+500
+pdf-matrix-api-server-bbbq-f9x3jmm2r.vercel.app
+/
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/var/task/artifacts/api-server/src/routes/health' imported from /var/task/artifacts/api-server/src/routes/index.js at finalizeResolution (node:internal/modules/esm/resolve:280:11) at moduleResolve (node:internal/modules/esm/resolve:870:10) at moduleResolveWithNodePath (node:internal/modules/esm/resolve:996:14) at defaultResolve (node:internal/modules/esm/resolve:1039:79) at #cachedDefaultResolve (node:internal/modules/esm/loader:718:20) at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:735:38) at ModuleLoader.resolveSync (node:internal/modules/esm/loader:764:52) at #resolve (node:internal/modules/esm/loader:700:17) at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:620:35) at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33) { code: 'ERR_MODULE_NOT_FOUND', url: 'file:///var/task/artifacts/api-server/src/routes/health' } Node.js process exited with exit status: 1. The logs above can help with debugging the issue. Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/var/task/artifacts/api-server/src/routes/health' imported from /var/task/artifacts/api-server/src/routes/index.js at finalizeResolution (node:internal/modules/esm/resolve:280:11) at moduleResolve (node:internal/modules/esm/resolve:870:10) at moduleResolveWithNodePath (node:internal/modules/esm/resolve:996:14) at defaultResolve (node:internal/modules/esm/resolve:1039:79) at #cachedDefaultResolve (node:internal/modules/esm/loader:718:20) at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:735:38) at ModuleLoader.resolveSync (node:internal/modules/esm/loader:764:52) at #resolve (node:internal/modules/esm/loader:700:17) at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:620:35) at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33) { code: 'ERR_MODULE_NOT_FOUND', url: 'file:///var/task/artifacts/api-server/src/routes/health' } Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:41:06.98
+GET
+500
+pdf-matrix-api-server-bbbq-f9x3jmm2r.vercel.app
+/
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/var/task/artifacts/api-server/src/routes/health' imported from /var/task/artifacts/api-server/src/routes/index.js at finalizeResolution (node:internal/modules/esm/resolve:280:11) at moduleResolve (node:internal/modules/esm/resolve:870:10) at moduleResolveWithNodePath (node:internal/modules/esm/resolve:996:14) at defaultResolve (node:internal/modules/esm/resolve:1039:79) at #cachedDefaultResolve (node:internal/modules/esm/loader:718:20) at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:735:38) at ModuleLoader.resolveSync (node:internal/modules/esm/loader:764:52) at #resolve (node:internal/modules/esm/loader:700:17) at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:620:35) at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33) { code: 'ERR_MODULE_NOT_FOUND', url: 'file:///var/task/artifacts/api-server/src/routes/health' } Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Mar 27 23:41:06.93
+GET
+500
+pdf-matrix-api-server-bbbq-f9x3jmm2r.vercel.app
+/
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/var/task/artifacts/api-server/src/routes/health' imported from /var/task/artifacts/api-server/src/routes/index.js at finalizeResolution (node:internal/modules/esm/resolve:280:11) at moduleResolve (node:internal/modules/esm/resolve:870:10) at moduleResolveWithNodePath (node:internal/modules/esm/resolve:996:14) at defaultResolve (node:internal/modules/esm/resolve:1039:79) at #cachedDefaultResolve (node:internal/modules/esm/loader:718:20) at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:735:38) at ModuleLoader.resolveSync (node:internal/modules/esm/loader:764:52) at #resolve (node:internal/modules/esm/loader:700:17) at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:620:35) at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33) { code: 'ERR_MODULE_NOT_FOUND', url: 'file:///var/task/artifacts/api-server/src/routes/health' } Node.js process exited with exit status: 1. The logs above can help with debugging the issue. Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/var/task/artifacts/api-server/src/routes/health' imported from /var/task/artifacts/api-server/src/routes/index.js at finalizeResolution (node:internal/modules/esm/resolve:280:11) at moduleResolve (node:internal/modules/esm/resolve:870:10) at moduleResolveWithNodePath (node:internal/modules/esm/resolve:996:14) at defaultResolve (node:internal/modules/esm/resolve:1039:79) at #cachedDefaultResolve (node:internal/modules/esm/loader:718:20) at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:735:38) at ModuleLoader.resolveSync (node:internal/modules/esm/loader:764:52) at #resolve (node:internal/modules/esm/loader:700:17) at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:620:35) at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33) { code: 'ERR_MODULE_NOT_FOUND', url: 'file:///var/task/artifacts/api-server/src/routes/health' } Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
