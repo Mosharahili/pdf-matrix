@@ -11,8 +11,8 @@ function getOrInit() {
   if (_db) return { pool: _pool!, db: _db };
   const connectionString =
     process.env.DATABASE_URL ||
-    process.env.POSTGRES_URL ||
     process.env.POSTGRES_URL_NON_POOLING ||
+    process.env.POSTGRES_URL ||
     process.env.POSTGRES_PRISMA_URL;
   if (!connectionString) {
     throw new Error(
@@ -25,8 +25,8 @@ function getOrInit() {
   _pool = new Pool({
     connectionString,
     ssl,
-    connectionTimeoutMillis: 5000,
-    idleTimeoutMillis: 10000,
+    connectionTimeoutMillis: 10000,
+    idleTimeoutMillis: 15000,
     max: 1,
   });
   _db = drizzle(_pool, { schema });
