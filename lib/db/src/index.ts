@@ -14,7 +14,10 @@ function getOrInit() {
       "DATABASE_URL must be set. Did you forget to provision a database?",
     );
   }
-  _pool = new Pool({ connectionString: process.env.DATABASE_URL });
+  const ssl = process.env.DATABASE_URL.includes("sslmode=disable")
+    ? false
+    : { rejectUnauthorized: false };
+  _pool = new Pool({ connectionString: process.env.DATABASE_URL, ssl });
   _db = drizzle(_pool, { schema });
   return { pool: _pool, db: _db };
 }
