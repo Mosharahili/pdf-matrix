@@ -9,16 +9,21 @@ let _db: ReturnType<typeof drizzle<typeof schema>> | null = null;
 
 function getOrInit() {
   if (_db) return { pool: _pool!, db: _db };
-  if (!process.env.DATABASE_URL) {
+  const connectionString =
+    process.env.DATABASE_URL ||
+    process.env.POSTGRES_URL ||
+    process.env.POSTGRES_URL_NON_POOLING ||
+    process.env.POSTGRES_PRISMA_URL;
+  if (!connectionString) {
     throw new Error(
-      "DATABASE_URL must be set. Did you forget to provision a database?",
+      "No database URL found. Set DATABASE_URL, POSTGRES_URL, or POSTGRES_URL_NON_POOLING.",
     );
   }
-  const ssl = process.env.DATABASE_URL.includes("sslmode=disable")
+  const ssl = connectionString.includes("sslmode=disable")
     ? false
     : { rejectUnauthorized: false };
   _pool = new Pool({
-    connectionString: process.env.DATABASE_URL,
+    connectionString,
     ssl,
     connectionTimeoutMillis: 5000,
     idleTimeoutMillis: 10000,
