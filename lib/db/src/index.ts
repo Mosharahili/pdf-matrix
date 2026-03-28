@@ -17,7 +17,13 @@ function getOrInit() {
   const ssl = process.env.DATABASE_URL.includes("sslmode=disable")
     ? false
     : { rejectUnauthorized: false };
-  _pool = new Pool({ connectionString: process.env.DATABASE_URL, ssl });
+  _pool = new Pool({
+    connectionString: process.env.DATABASE_URL,
+    ssl,
+    connectionTimeoutMillis: 5000,
+    idleTimeoutMillis: 10000,
+    max: 1,
+  });
   _db = drizzle(_pool, { schema });
   return { pool: _pool, db: _db };
 }
