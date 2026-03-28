@@ -19,11 +19,19 @@ function getOrInit() {
       "No database URL found. Set DATABASE_URL, POSTGRES_URL, or POSTGRES_URL_NON_POOLING.",
     );
   }
-  const ssl = connectionString.includes("sslmode=disable")
-    ? false
-    : { rejectUnauthorized: false };
+  const isLocalDb = connectionString.includes("sslmode=disable") || connectionString.includes("localhost") || connectionString.includes("helium");
+  let cleanedUrl = connectionString;
+  let ssl: false | { rejectUnauthorized: boolean } = false;
+  if (!isLocalDb) {
+    const u = new URL(connectionString);
+    u.searchParams.delete("sslmode");
+    u.searchParams.delete("pgbouncer");
+    u.searchParams.delete("supa");
+    cleanedUrl = u.toString();
+    ssl = { rejectUnauthorized: false };
+  }
   _pool = new Pool({
-    connectionString,
+    connectionString: cleanedUrl,
     ssl,
     connectionTimeoutMillis: 10000,
     idleTimeoutMillis: 15000,
