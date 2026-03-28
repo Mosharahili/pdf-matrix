@@ -1,11 +1,15 @@
 {
-  "buildCommand": "node artifacts/api-server/build.mjs",
-  "functions": {
-    "api/index.js": {
-      "includeFiles": "artifacts/api-server/dist/**"
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/index.js",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": "api/dist/**"
+      }
     }
-  },
+  ],
   "rewrites": [
-    { "source": "/(.*)", "destination": "/api/index" }
+    { "source": "/(.*)", "destination": "/api/index.js" }
   ]
 }
