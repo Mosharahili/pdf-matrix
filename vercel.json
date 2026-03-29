@@ -5,13 +5,7 @@
       "src": "api/index.js",
       "use": "@vercel/node",
       "config": {
-        "includeFiles": [
-          "api/dist/**",
-          "node_modules/.pnpm/**/mupdf/dist/**",
-          "node_modules/.pnpm/**/node_modules/docx/**",
-          "node_modules/.pnpm/**/node_modules/exceljs/**",
-          "node_modules/.pnpm/**/node_modules/pptxgenjs/**"
-        ]
+        "includeFiles": "api/dist/**"
       }
     }
   ],
