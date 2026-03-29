@@ -2,8 +2,6 @@ import { Router, type IRouter } from "express";
 import { eq } from "drizzle-orm";
 import path from "path";
 import fs from "fs";
-import { execFile } from "child_process";
-import { promisify } from "util";
 import { db, filesTable, conversionsTable } from "@workspace/db";
 import {
   StartConversionBody,
@@ -12,7 +10,6 @@ import {
   GetConversionStatusResponse,
 } from "@workspace/api-zod";
 
-const execFileAsync = promisify(execFile);
 const router: IRouter = Router();
 
 const CONVERTED_DIR = process.env.VERCEL
@@ -31,106 +28,140 @@ const FORMAT_MIME: Record<string, string> = {
   txt: "text/plain",
 };
 
+async function extractTextFromPdf(pdfData: Buffer): Promise<{ pages: string[]; allText: string }> {
+  const mupdf = await import("mupdf");
+  const doc = mupdf.Document.openDocument(pdfData, "application/pdf");
+  const pageCount = doc.countPages();
+  const pages: string[] = [];
+  for (let i = 0; i < pageCount; i++) {
+    const page = doc.loadPage(i);
+    const text = page.toStructuredText("preserve-whitespace").asText();
+    pages.push(text.trim());
+    page.destroy();
+  }
+  doc.destroy();
+  const allText = pages.join("\n\n--- Page Break ---\n\n");
+  return { pages, allText };
+}
+
+async function renderPdfPage(pdfData: Buffer, format: "png" | "jpg"): Promise<Buffer> {
+  const mupdf = await import("mupdf");
+  const doc = mupdf.Document.openDocument(pdfData, "application/pdf");
+  const page = doc.loadPage(0);
+  const pixmap = page.toPixmap([2, 0, 0, 2, 0, 0], mupdf.ColorSpace.DeviceRGB, false, true);
+  let result: Buffer;
+  if (format === "jpg") {
+    result = Buffer.from(pixmap.asJPEG(85));
+  } else {
+    result = Buffer.from(pixmap.asPNG());
+  }
+  pixmap.destroy();
+  page.destroy();
+  doc.destroy();
+  return result;
+}
+
 async function convertPdf(inputPath: string, outputFormat: string, outputDir: string): Promise<string> {
   const baseName = path.basename(inputPath, path.extname(inputPath));
   const outputName = `${baseName}-${Date.now()}.${outputFormat}`;
   const outputPath = path.join(outputDir, outputName);
+  const pdfData = fs.readFileSync(inputPath);
 
   if (outputFormat === "txt") {
-    try {
-      await execFileAsync("pdftotext", [inputPath, outputPath]);
-      if (fs.existsSync(outputPath)) {
-        return outputPath;
-      }
-      throw new Error("pdftotext produced no output");
-    } catch (pdftotextErr) {
-      try {
-        const { stdout } = await execFileAsync("strings", [inputPath]);
-        if (!stdout || stdout.trim().length === 0) {
-          throw new Error("No extractable text found in PDF");
-        }
-        fs.writeFileSync(outputPath, stdout);
-        return outputPath;
-      } catch (stringsErr) {
-        throw new Error(`Text extraction failed: ${String(pdftotextErr)}; strings fallback: ${String(stringsErr)}`);
-      }
-    }
+    const { allText } = await extractTextFromPdf(pdfData);
+    const text = allText.trim() || "[No extractable text found in this PDF]";
+    fs.writeFileSync(outputPath, text, "utf-8");
+    return outputPath;
   }
 
   if (outputFormat === "png" || outputFormat === "jpg") {
-    const density = 150;
-    const quality = 90;
-    try {
-      await execFileAsync("convert", [
-        "-density", String(density),
-        "-quality", String(quality),
-        `${inputPath}[0]`,
-        outputPath,
-      ]);
-      if (fs.existsSync(outputPath)) {
-        return outputPath;
-      }
-      throw new Error("ImageMagick convert produced no output");
-    } catch (convertErr) {
-      try {
-        const prefix = path.join(outputDir, `${baseName}-${Date.now()}`);
-        const ext = outputFormat === "jpg" ? "jpeg" : "png";
-        await execFileAsync("pdftoppm", [
-          "-r", String(density),
-          "-f", "1",
-          "-l", "1",
-          `-${ext}`,
-          inputPath,
-          prefix,
-        ]);
-        const dirFiles = fs.readdirSync(outputDir);
-        const basePart = path.basename(prefix);
-        const match = dirFiles.find(
-          (f) => f.startsWith(basePart) && f.endsWith(`.${outputFormat}`)
-        );
-        if (match) {
-          const finalPath = path.join(outputDir, outputName);
-          fs.renameSync(path.join(outputDir, match), finalPath);
-          return finalPath;
-        }
-        throw new Error("pdftoppm produced no output file");
-      } catch (pdftoppmErr) {
-        throw new Error(
-          `Image conversion failed. ImageMagick: ${String(convertErr)}; pdftoppm: ${String(pdftoppmErr)}`
-        );
-      }
-    }
+    const imgBuf = await renderPdfPage(pdfData, outputFormat);
+    fs.writeFileSync(outputPath, imgBuf);
+    return outputPath;
   }
 
-  if (outputFormat === "docx" || outputFormat === "xlsx" || outputFormat === "pptx") {
-    try {
-      await execFileAsync("libreoffice", [
-        "--headless",
-        "--convert-to", outputFormat,
-        "--outdir", outputDir,
-        inputPath,
-      ]);
-      const expectedOutput = path.join(outputDir, `${baseName}.${outputFormat}`);
-      if (fs.existsSync(expectedOutput)) {
-        const finalOutput = path.join(outputDir, outputName);
-        fs.renameSync(expectedOutput, finalOutput);
-        return finalOutput;
-      }
-      throw new Error("LibreOffice produced no output file");
-    } catch (libreOfficeErr) {
-      try {
-        await execFileAsync("unoconv", ["-f", outputFormat, "-o", outputPath, inputPath]);
-        if (fs.existsSync(outputPath)) {
-          return outputPath;
-        }
-        throw new Error("unoconv produced no output file");
-      } catch (unoconvErr) {
-        throw new Error(
-          `Office conversion requires LibreOffice or unoconv. ` +
-          `LibreOffice: ${String(libreOfficeErr)}; unoconv: ${String(unoconvErr)}`
+  if (outputFormat === "docx") {
+    const { Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType } = await import("docx");
+    const { allText, pages } = await extractTextFromPdf(pdfData);
+    const children = [];
+    children.push(
+      new Paragraph({
+        text: baseName,
+        heading: HeadingLevel.HEADING_1,
+        alignment: AlignmentType.LEFT,
+      })
+    );
+    pages.forEach((pageText, idx) => {
+      if (pages.length > 1) {
+        children.push(
+          new Paragraph({
+            text: `Page ${idx + 1}`,
+            heading: HeadingLevel.HEADING_2,
+          })
         );
       }
-    }
+      const lines = pageText.split("\n");
+      for (const line of lines) {
+        children.push(
+          new Paragraph({
+            children: [new TextRun({ text: line, size: 22 })],
+          })
+        );
+      }
+      if (idx < pages.length - 1) {
+        children.push(new Paragraph({ pageBreakBefore: true, children: [] }));
+      }
+    });
+    const doc = new Document({
+      sections: [{ children }],
+    });
+    const buf = await Packer.toBuffer(doc);
+    fs.writeFileSync(outputPath, buf);
+    return outputPath;
+  }
+
+  if (outputFormat === "xlsx") {
+    const ExcelJS = await import("exceljs");
+    const WorkbookClass = (ExcelJS as any).default?.Workbook ?? (ExcelJS as any).Workbook;
+    const wb = new WorkbookClass();
+    const { pages } = await extractTextFromPdf(pdfData);
+    pages.forEach((pageText, idx) => {
+      const ws = wb.addWorksheet(`Page ${idx + 1}`);
+      ws.getColumn(1).width = 80;
+      const lines = pageText.split("\n").filter((l: string) => l.trim());
+      if (lines.length === 0) {
+        ws.addRow(["[No extractable text on this page]"]);
+      } else {
+        lines.forEach((line: string) => ws.addRow([line]));
+      }
+    });
+    const buf = await wb.xlsx.writeBuffer();
+    fs.writeFileSync(outputPath, Buffer.from(buf));
+    return outputPath;
+  }
+
+  if (outputFormat === "pptx") {
+    const PptxGenJS = (await import("pptxgenjs")).default;
+    const { pages } = await extractTextFromPdf(pdfData);
+    const prs = new PptxGenJS();
+    prs.layout = "LAYOUT_WIDE";
+    pages.forEach((pageText, idx) => {
+      const slide = prs.addSlide();
+      slide.addText(`Page ${idx + 1} of ${pages.length}`, {
+        x: 0.5, y: 0.1, w: 9, h: 0.5,
+        fontSize: 12, color: "888888", italic: true,
+      });
+      const lines = pageText.split("\n").filter((l: string) => l.trim());
+      const content = lines.length > 0 ? lines.join("\n") : "[No extractable text on this page]";
+      slide.addText(content, {
+        x: 0.5, y: 0.7, w: 9, h: 4.8,
+        fontSize: 14, color: "333333",
+        valign: "top", wrap: true,
+      });
+    });
+    const buf = await prs.write({ outputType: "nodebuffer" });
+    fs.writeFileSync(outputPath, buf as Buffer);
+    return outputPath;
   }
 
   throw new Error(`Unsupported output format: ${outputFormat}`);
@@ -254,8 +285,8 @@ router.get("/conversions/:conversionId/download", async (req, res): Promise<void
   const mime = FORMAT_MIME[ext] ?? "application/octet-stream";
 
   const [file] = await db.select().from(filesTable).where(eq(filesTable.id, conv.fileId));
-  const baseName = file ? path.basename(file.originalName, ".pdf") : "converted";
-  const downloadName = `${baseName}.${conv.outputFormat}`;
+  const downloadBaseName = file ? path.basename(file.originalName, ".pdf") : "converted";
+  const downloadName = `${downloadBaseName}.${conv.outputFormat}`;
 
   res.setHeader("Content-Type", mime);
   res.download(conv.convertedPath, downloadName);
