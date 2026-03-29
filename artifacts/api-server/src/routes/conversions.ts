@@ -231,9 +231,14 @@ router.post("/conversions", async (req, res): Promise<void> => {
     })
     .returning();
 
-  res.status(201).json(GetConversionStatusResponse.parse(conversion));
+  await runConversion(conversion.id);
 
-  runConversion(conversion.id).catch(() => {});
+  const [updated] = await db
+    .select()
+    .from(conversionsTable)
+    .where(eq(conversionsTable.id, conversion.id));
+
+  res.status(201).json(GetConversionStatusResponse.parse(updated ?? conversion));
 });
 
 router.get("/conversions/:conversionId", async (req, res): Promise<void> => {
