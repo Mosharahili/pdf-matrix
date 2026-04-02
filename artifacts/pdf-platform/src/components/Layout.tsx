@@ -1,15 +1,25 @@
-import React from 'react';
-import { useTranslation } from '@/lib/i18n';
-import { Languages, Layers } from 'lucide-react';
+import React, { useState, useRef, useEffect } from 'react';
+import { useTranslation, LANGUAGE_LABELS, Language } from '@/lib/i18n';
+import { Languages, Layers, ChevronDown } from 'lucide-react';
 import { Link } from 'wouter';
 import { motion } from 'framer-motion';
 
+const LANGUAGES = Object.entries(LANGUAGE_LABELS) as [Language, string][];
+
 export function Layout({ children }: { children: React.ReactNode }) {
   const { language, setLanguage, t } = useTranslation();
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
 
-  const toggleLanguage = () => {
-    setLanguage(language === 'en' ? 'ar' : 'en');
-  };
+  useEffect(() => {
+    function handleClick(e: MouseEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    }
+    document.addEventListener('mousedown', handleClick);
+    return () => document.removeEventListener('mousedown', handleClick);
+  }, []);
 
   return (
     <div className="min-h-screen flex flex-col bg-background relative overflow-hidden">
@@ -35,14 +45,41 @@ export function Layout({ children }: { children: React.ReactNode }) {
             </span>
           </Link>
 
-          <button
-            onClick={toggleLanguage}
-            className="flex items-center gap-2 px-4 py-2 rounded-full hover:bg-secondary text-sm font-medium text-foreground transition-colors duration-200"
-            aria-label="Toggle language"
-          >
-            <Languages className="w-4 h-4 text-muted-foreground" />
-            {language === 'en' ? 'العربية' : 'English'}
-          </button>
+          {/* Language Dropdown */}
+          <div className="relative" ref={ref}>
+            <button
+              onClick={() => setOpen(v => !v)}
+              className="flex items-center gap-2 px-4 py-2 rounded-full hover:bg-secondary text-sm font-medium text-foreground transition-colors duration-200"
+              aria-label="Select language"
+              aria-expanded={open}
+            >
+              <Languages className="w-4 h-4 text-muted-foreground" />
+              <span>{LANGUAGE_LABELS[language]}</span>
+              <ChevronDown className={`w-3 h-3 text-muted-foreground transition-transform duration-200 ${open ? 'rotate-180' : ''}`} />
+            </button>
+
+            {open && (
+              <motion.div
+                initial={{ opacity: 0, y: -6, scale: 0.96 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: -6 }}
+                transition={{ duration: 0.15 }}
+                className="absolute end-0 mt-1 w-40 rounded-xl border border-border bg-white shadow-lg shadow-black/5 overflow-hidden z-50"
+              >
+                {LANGUAGES.map(([code, label]) => (
+                  <button
+                    key={code}
+                    onClick={() => { setLanguage(code); setOpen(false); }}
+                    className={`w-full text-start px-4 py-2.5 text-sm transition-colors hover:bg-secondary ${
+                      language === code ? 'font-semibold text-primary bg-blue-50' : 'text-foreground'
+                    }`}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </motion.div>
+            )}
+          </div>
         </div>
       </header>
 

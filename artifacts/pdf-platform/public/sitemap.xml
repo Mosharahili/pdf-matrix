@@ -1,44 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  IMPORTANT: Replace "pdf-matrix.vercel.app" below with your actual production domain.
-  You can also set VITE_SITE_URL in your Vercel project environment variables and
-  run `pnpm --filter @workspace/pdf-platform run generate-sitemap` to regenerate.
--->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://pdf-matrix.vercel.app/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pdf-matrix.vercel.app/?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://pdf-matrix.vercel.app/?lang=ar"/>
+    <loc>https://studio-pdf.site/</loc>
+    <xhtml:link rel="alternate" hreflang="en"      href="https://studio-pdf.site/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ar"      href="https://studio-pdf.site/?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="fr"      href="https://studio-pdf.site/?lang=fr"/>
+    <xhtml:link rel="alternate" hreflang="es"      href="https://studio-pdf.site/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="tr"      href="https://studio-pdf.site/?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="ur"      href="https://studio-pdf.site/?lang=ur"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studio-pdf.site/"/>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://pdf-matrix.vercel.app/dashboard</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pdf-matrix.vercel.app/dashboard?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://pdf-matrix.vercel.app/dashboard?lang=ar"/>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://pdf-matrix.vercel.app/convert/pdf-to-word</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pdf-matrix.vercel.app/convert/pdf-to-word?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://pdf-matrix.vercel.app/convert/pdf-to-word?lang=ar"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://pdf-matrix.vercel.app/convert/pdf-to-excel</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pdf-matrix.vercel.app/convert/pdf-to-excel?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://pdf-matrix.vercel.app/convert/pdf-to-excel?lang=ar"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://pdf-matrix.vercel.app/convert/pdf-to-powerpoint</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pdf-matrix.vercel.app/convert/pdf-to-powerpoint?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://pdf-matrix.vercel.app/convert/pdf-to-powerpoint?lang=ar"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
   </url>
 </urlset>
